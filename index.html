@@ -1,0 +1,69 @@
+<!--
+Assignment: Homework4 - Part2: jQuery UI Slider and Tab Widgets
+Name: Alvin Tran
+Contact Information: Alvin_Tran@student.uml.edu
+Date: 11/22/2021
+Resources Used:
+    https://api.jquery.com/
+    https://jqueryui.com/
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title> Interactive Multiplication Table </title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">  <!-- To use jQuery ui, need to link css also-->
+    </head>
+    <body>
+        <header>
+            <h1> Interactive Multiplication Table </h1>
+        </header>
+
+        <div class="form_container">
+            <p>If maximum value is less than minimum value,<br> the values will be switched!</p><br><br>
+
+            <!-- my form to get minimum and maximum row/column values-->
+            <form name="myForm" action="index.html" id="myForm" autocomplete="off">
+                <label for="minRow">Minimum Row Value: </label>
+                <input type="text" id="minRow" name="minRow">
+                <div id="minRowSlider"></div><br><br>  <!-- Inserted new div for minRow's slider-->
+
+                <label for="maxRow">Maximum Row Value: </label>
+                <input type="text" id="maxRow" name="maxRow">
+                <div id="maxRowSlider"></div><br><br>  <!-- Inserted new div for maxRow's slider-->
+
+                <label for="minCol">Minimum Column Value: </label>
+                <input type="text" id="minCol" name="minCol">
+                <div id="minColSlider"></div><br><br>  <!-- Inserted new div for minCol's slider-->
+
+                <label for="maxCol">Maximum Column Value: </label>
+                <input type="text" id="maxCol" name="maxCol">
+                <div id="maxColSlider"></div><br><br>  <!-- Inserted new div for maxCol's slider-->
+                    
+                <input type="submit" value="Add Tab">
+            </form>
+        </div>
+
+        <!-- table will be inside a container div in order to make it scrollable -->
+        <div id="table_container">
+            <table id="multiplication_table"></table>
+        </div>
+
+        <!-- Tabs will be inside this container div-->
+        <div id="tab_container">
+            <h3>TABS WILL BE PLACED HERE.<input type="button" value="Delete Tab(s)" id="tabDelete"> </h3>
+            <!-- Lists are needed in order to create tabs-->
+            <ul></ul>
+        </div>
+        
+        <!-- jquery cdn hotlinks -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  <!-- brings in jquery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js"></script>  <!-- brings in jquery validation plugin -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.js"></script>  <!-- brings in jquery validation plugin, more methods -->
+        <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>  <!-- brings in jquery user interface -->
+
+        <script src="js/script.js"></script>
+    </body>
+</html>

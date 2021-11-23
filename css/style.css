@@ -1,0 +1,84 @@
+/*
+Assignment: Homework4 - Part2: jQuery UI Slider and Tab Widgets
+Name: Alvin Tran
+Contact Information: Alvin_Tran@student.uml.edu
+Date: 11/22/2021
+Resources Used:
+    https://api.jquery.com/
+    https://jqueryui.com/
+*/
+
+body {
+    background-color: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 600px;
+    overflow: hidden;
+}
+
+p {
+    text-align: center;
+}
+
+.form_container {
+    float: left;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 20px;
+    border: 5px solid beige;
+    padding: 40px;
+}
+
+.error {
+    color: darkred;
+    text-align: center;
+}
+
+#minRowSlider, #maxRowSlider, #minColSlider, #maxColSlider {
+    margin-top: 10px;
+}
+
+input[type=submit], input[type=button] {
+    background-color: beige;
+}
+
+#table_container {
+    float: left;
+    max-height: 543px; /* contain the table with a maximum height of 650px */
+    max-width: 500px; /* contain the table with a maximum width of 650px */
+    overflow: auto;  /* overflow is set to auto so that a scrollbar will be created when needed */
+}
+
+table {
+    background-color: white;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    text-align: right;
+    padding-left: 10px;
+}
+
+th {
+    border: 3px solid black;
+    background: beige;
+    position: sticky;  /* sticky is used so that the table header stays put when scrolling the table*/
+    top: 0;  /* top must be set to 0 to use sticky on the first row table headers */
+    left: 0; /* left must be set to 0 to use sticky on the first column table headers */
+}
+
+/*
+Container that contains the tabs. It has a fixed position on the page and overflow is used
+and set to auto so that the multiplication table in the tab stays inside the container.
+*/
+#tab_container {
+    position: fixed;
+    left: 1005px;
+    height: 537px; /* contain the table with a maximum height of 650px */
+    width: 500px; /* contain the table with a maximum width of 650px */
+    overflow: auto;  /* overflow is set to auto so that a scrollbar will be created when needed */
+}
+
+#tabDelete {
+    margin-left: 45px;
+}
